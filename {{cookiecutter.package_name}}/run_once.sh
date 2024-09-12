@@ -1,4 +1,4 @@
-github_url="{{cookiecutter.package_url}"
+github_url="{{cookiecutter.package_url}}"
 git init
 git remote add origin github_url
 

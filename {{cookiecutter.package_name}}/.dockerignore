@@ -4,4 +4,4 @@
 # ... except for dependencies and source
 !pyproject.toml
 !poetry.lock
-!{{cookiecutter.repo_name}}
+!{{cookiecutter.package_name}}
