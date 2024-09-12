@@ -1,0 +1,47 @@
+repos:
+  - repo: local
+    hooks:
+      - id: poetry run isort
+        name: Sorting dependencies
+        stages: [commit]
+        language: system
+        entry: poetry run isort
+        types: [python]
+
+      - id: poetry run  black
+        name: Black
+        stages: [commit]
+        language: system
+        entry: poetry run black
+        types: [python]
+
+      - id: poetry run flake8
+        name: Flake8
+        stages: [commit]
+        language: system
+        entry: poetry run flake8
+        types: [python]
+        exclude: setup.py
+
+      - id: poetry run mypy
+        name: MyPy
+        stages: [commit]
+        language: system
+        entry: poetry run mypy
+        types: [python]
+        pass_filenames: false
+
+      # - id: poetry run pytest
+      #   name: poetry run pytest
+      #   stages: [commit]
+      #   language: system
+      #   entry: poetry run pytest
+      #   types: [python]
+      #
+      # - id: poetry run pytest-cov
+      #   name: poetry run pytest
+      #   stages: [push]
+      #   language: system
+      #   entry: poetry run pytest --cov --cov-fail-under=100
+      #   types: [python]
+      #   pass_filenames: false

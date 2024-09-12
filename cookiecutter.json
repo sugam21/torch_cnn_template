@@ -1,0 +1,11 @@
+{
+  "author_name": "Sugam Sharma",
+  "author_email": "sugams342@gmail.com",
+  "project_name": "python-template",
+  "package_name": "{{cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_')}}",
+  "package_version": "0.1.0",
+  "descripton": "",
+  "package_mode": "false",
+  "github_username": "sugam21",
+  "package_url": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.package_name}}"
+}
